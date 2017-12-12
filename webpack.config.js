@@ -18,10 +18,14 @@ module.exports = {
       {
         test: /jsx?$/,
         include: resolve(__dirname, './app'),
+        
         loader: 'babel-loader',
         query: {
           presets: ['react', 'es2015']
         }
+      },
+      {
+        test: /\.css$/, loader: 'style-loader!css-loader'
       }
     ]
   }
